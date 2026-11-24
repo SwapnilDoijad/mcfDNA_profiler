@@ -1,2 +1,0 @@
-RuleException in file "/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile", line 59:
-Not all output, log and benchmark files of rule step_002_summarize_reads contain the same wildcards. This is crucial though, in order to avoid that two or more jobs write to the same file.

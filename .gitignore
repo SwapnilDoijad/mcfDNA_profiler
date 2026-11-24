@@ -1,2 +1,4 @@
 github.sh
 .gitignore
+.snakemake/
+.snakemake
