@@ -1,0 +1,790 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 10:46:59
+  Workflow ID: fef8636b-7997-4214-9b99-387333fa5538
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: node001
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin/snakemake --configfile config.yaml --cores 4
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: 5e6407fb940a84a3432918083283f8c2
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+count_reads           57
+summarize_reads        1
+all                    1
+total                 59
+
+Select jobs to execute...
+Execute 4 jobs...
+[Tue Nov 24 10:46:59 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_4.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_4.tsv
+    jobid: 5
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_4.tsv
+    wildcards: sample=H2O_4
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:46:59 2026]
+localrule count_reads:
+    input: ../data/fastq/JE15a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_1.tsv
+    jobid: 20
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_1.tsv
+    wildcards: sample=JE15a_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:46:59 2026]
+localrule count_reads:
+    input: ../data/fastq/JE25a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_2.tsv
+    jobid: 35
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_2.tsv
+    wildcards: sample=JE25a_2
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:46:59 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_1.tsv
+    jobid: 2
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_1.tsv
+    wildcards: sample=H2O_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 2 (Rule: count_reads)
+1 of 59 steps (2%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/JE26a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_1.tsv
+    jobid: 36
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_1.tsv
+    wildcards: sample=JE26a_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 5 (Rule: count_reads)
+2 of 59 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/JE15a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_2.tsv
+    jobid: 21
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_2.tsv
+    wildcards: sample=JE15a_2
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 35 (Rule: count_reads)
+3 of 59 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/JE31a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_2.tsv
+    jobid: 51
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_2.tsv
+    wildcards: sample=JE31a_2
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 36 (Rule: count_reads)
+4 of 59 steps (7%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_6.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_6.tsv
+    jobid: 7
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_6.tsv
+    wildcards: sample=H2O_6
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 7 (Rule: count_reads)
+5 of 59 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_5.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_5.tsv
+    jobid: 6
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_5.tsv
+    wildcards: sample=H2O_5
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 20 (Rule: count_reads)
+6 of 59 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/JE02a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_1.tsv
+    jobid: 13
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_1.tsv
+    wildcards: sample=JE02a_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:00 2026]
+Finished jobid: 6 (Rule: count_reads)
+7 of 59 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:00 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_1.tsv
+    jobid: 28
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_1.tsv
+    wildcards: sample=JE20a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:01 2026]
+Finished jobid: 21 (Rule: count_reads)
+8 of 59 steps (14%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:01 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_3.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_3.tsv
+    jobid: 4
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_3.tsv
+    wildcards: sample=H2O_3
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:01 2026]
+Finished jobid: 28 (Rule: count_reads)
+9 of 59 steps (15%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:01 2026]
+localrule count_reads:
+    input: ../data/fastq/JE14a.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE14a.tsv
+    jobid: 19
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE14a.tsv
+    wildcards: sample=JE14a
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:01 2026]
+Finished jobid: 4 (Rule: count_reads)
+10 of 59 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:01 2026]
+localrule count_reads:
+    input: ../data/fastq/JE31a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_1.tsv
+    jobid: 50
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_1.tsv
+    wildcards: sample=JE31a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:01 2026]
+Finished jobid: 19 (Rule: count_reads)
+11 of 59 steps (19%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:01 2026]
+localrule count_reads:
+    input: ../data/fastq/JE25a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_1.tsv
+    jobid: 34
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_1.tsv
+    wildcards: sample=JE25a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:01 2026]
+Finished jobid: 34 (Rule: count_reads)
+12 of 59 steps (20%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:01 2026]
+localrule count_reads:
+    input: ../data/fastq/JE32a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_1.tsv
+    jobid: 52
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_1.tsv
+    wildcards: sample=JE32a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:02 2026]
+Finished jobid: 51 (Rule: count_reads)
+13 of 59 steps (22%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:02 2026]
+localrule count_reads:
+    input: ../data/fastq/JE30a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_2.tsv
+    jobid: 49
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_2.tsv
+    wildcards: sample=JE30a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:03 2026]
+Finished jobid: 49 (Rule: count_reads)
+14 of 59 steps (24%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:03 2026]
+localrule count_reads:
+    input: ../data/fastq/JE26a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_2.tsv
+    jobid: 37
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_2.tsv
+    wildcards: sample=JE26a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:03 2026]
+Finished jobid: 37 (Rule: count_reads)
+15 of 59 steps (25%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:03 2026]
+localrule count_reads:
+    input: ../data/fastq/JE30a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_1.tsv
+    jobid: 48
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_1.tsv
+    wildcards: sample=JE30a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:03 2026]
+Finished jobid: 50 (Rule: count_reads)
+16 of 59 steps (27%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:03 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_1.tsv
+    jobid: 22
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_1.tsv
+    wildcards: sample=JE19a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:03 2026]
+Finished jobid: 22 (Rule: count_reads)
+17 of 59 steps (29%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:03 2026]
+localrule count_reads:
+    input: ../data/fastq/H2O_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_2.tsv
+    jobid: 3
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_2.tsv
+    wildcards: sample=H2O_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 3 (Rule: count_reads)
+18 of 59 steps (31%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_2.tsv
+    jobid: 23
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_2.tsv
+    wildcards: sample=JE19a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 48 (Rule: count_reads)
+19 of 59 steps (32%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/JE06a.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE06a.tsv
+    jobid: 18
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE06a.tsv
+    wildcards: sample=JE06a
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 23 (Rule: count_reads)
+20 of 59 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/Healthy_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_1.tsv
+    jobid: 8
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_1.tsv
+    wildcards: sample=Healthy_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 8 (Rule: count_reads)
+21 of 59 steps (36%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_2.tsv
+    jobid: 33
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_2.tsv
+    wildcards: sample=JE20c_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 33 (Rule: count_reads)
+22 of 59 steps (37%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27d_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_1.tsv
+    jobid: 44
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_1.tsv
+    wildcards: sample=JE27d_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:04 2026]
+Finished jobid: 52 (Rule: count_reads)
+23 of 59 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:04 2026]
+localrule count_reads:
+    input: ../data/fastq/JE02a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_2.tsv
+    jobid: 14
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_2.tsv
+    wildcards: sample=JE02a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:05 2026]
+Finished jobid: 44 (Rule: count_reads)
+24 of 59 steps (41%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:05 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_2.tsv
+    jobid: 43
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_2.tsv
+    wildcards: sample=JE27c_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:05 2026]
+Finished jobid: 18 (Rule: count_reads)
+25 of 59 steps (42%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:05 2026]
+localrule count_reads:
+    input: ../data/fastq/JE35a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE35a_1.tsv
+    jobid: 58
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE35a_1.tsv
+    wildcards: sample=JE35a_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:05 2026]
+Finished jobid: 43 (Rule: count_reads)
+26 of 59 steps (44%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:05 2026]
+localrule count_reads:
+    input: ../data/fastq/JE01a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_2.tsv
+    jobid: 12
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_2.tsv
+    wildcards: sample=JE01a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:07 2026]
+Finished jobid: 13 (Rule: count_reads)
+27 of 59 steps (46%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:07 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_2.tsv
+    jobid: 27
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_2.tsv
+    wildcards: sample=JE19c_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:07 2026]
+Finished jobid: 27 (Rule: count_reads)
+28 of 59 steps (47%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:07 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_1.tsv
+    jobid: 42
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_1.tsv
+    wildcards: sample=JE27c_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:07 2026]
+Finished jobid: 42 (Rule: count_reads)
+29 of 59 steps (49%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:07 2026]
+localrule count_reads:
+    input: ../data/fastq/JE34a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_2.tsv
+    jobid: 57
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_2.tsv
+    wildcards: sample=JE34a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:08 2026]
+Finished jobid: 58 (Rule: count_reads)
+30 of 59 steps (51%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:08 2026]
+localrule count_reads:
+    input: ../data/fastq/JE34a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_1.tsv
+    jobid: 56
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_1.tsv
+    wildcards: sample=JE34a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:09 2026]
+Finished jobid: 14 (Rule: count_reads)
+31 of 59 steps (53%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:09 2026]
+localrule count_reads:
+    input: ../data/fastq/JE01a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_1.tsv
+    jobid: 11
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_1.tsv
+    wildcards: sample=JE01a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:09 2026]
+Finished jobid: 56 (Rule: count_reads)
+32 of 59 steps (54%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:09 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_1.tsv
+    jobid: 26
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_1.tsv
+    wildcards: sample=JE19c_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:10 2026]
+Finished jobid: 26 (Rule: count_reads)
+33 of 59 steps (56%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:10 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_2.tsv
+    jobid: 41
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_2.tsv
+    wildcards: sample=JE27b_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:10 2026]
+Finished jobid: 41 (Rule: count_reads)
+34 of 59 steps (58%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:10 2026]
+localrule count_reads:
+    input: ../data/fastq/JE33a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_2.tsv
+    jobid: 55
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_2.tsv
+    wildcards: sample=JE33a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:10 2026]
+Finished jobid: 57 (Rule: count_reads)
+35 of 59 steps (59%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:10 2026]
+localrule count_reads:
+    input: ../data/fastq/Healthy_3.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_3.tsv
+    jobid: 10
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_3.tsv
+    wildcards: sample=Healthy_3
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:10 2026]
+Finished jobid: 10 (Rule: count_reads)
+36 of 59 steps (61%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:10 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_2.tsv
+    jobid: 25
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_2.tsv
+    wildcards: sample=JE19b_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:11 2026]
+Finished jobid: 12 (Rule: count_reads)
+37 of 59 steps (63%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:11 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27b_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_1.tsv
+    jobid: 40
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_1.tsv
+    wildcards: sample=JE27b_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:11 2026]
+Finished jobid: 25 (Rule: count_reads)
+38 of 59 steps (64%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:11 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27e_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_2.tsv
+    jobid: 47
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_2.tsv
+    wildcards: sample=JE27e_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:11 2026]
+Finished jobid: 40 (Rule: count_reads)
+39 of 59 steps (66%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:11 2026]
+localrule count_reads:
+    input: ../data/fastq/JE04a.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE04a.tsv
+    jobid: 16
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE04a.tsv
+    wildcards: sample=JE04a
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:11 2026]
+Finished jobid: 47 (Rule: count_reads)
+40 of 59 steps (68%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:11 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_1.tsv
+    jobid: 38
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_1.tsv
+    wildcards: sample=JE27a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:11 2026]
+Finished jobid: 16 (Rule: count_reads)
+41 of 59 steps (69%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:12 2026]
+localrule count_reads:
+    input: ../data/fastq/JE32a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_2.tsv
+    jobid: 53
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_2.tsv
+    wildcards: sample=JE32a_2
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:12 2026]
+Finished jobid: 38 (Rule: count_reads)
+42 of 59 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:12 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20b_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_1.tsv
+    jobid: 30
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_1.tsv
+    wildcards: sample=JE20b_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:12 2026]
+Finished jobid: 30 (Rule: count_reads)
+43 of 59 steps (73%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:12 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27d_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_2.tsv
+    jobid: 45
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_2.tsv
+    wildcards: sample=JE27d_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:12 2026]
+Finished jobid: 45 (Rule: count_reads)
+44 of 59 steps (75%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:12 2026]
+localrule count_reads:
+    input: ../data/fastq/JE03a.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE03a.tsv
+    jobid: 15
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE03a.tsv
+    wildcards: sample=JE03a
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:12 2026]
+Finished jobid: 55 (Rule: count_reads)
+45 of 59 steps (76%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:12 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27e_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_1.tsv
+    jobid: 46
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_1.tsv
+    wildcards: sample=JE27e_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:13 2026]
+Finished jobid: 46 (Rule: count_reads)
+46 of 59 steps (78%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:13 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_2.tsv
+    jobid: 31
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_2.tsv
+    wildcards: sample=JE20b_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:13 2026]
+Finished jobid: 31 (Rule: count_reads)
+47 of 59 steps (80%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:13 2026]
+localrule count_reads:
+    input: ../data/fastq/JE19b_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_1.tsv
+    jobid: 24
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_1.tsv
+    wildcards: sample=JE19b_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:13 2026]
+Finished jobid: 15 (Rule: count_reads)
+48 of 59 steps (81%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:13 2026]
+localrule count_reads:
+    input: ../data/fastq/Healthy_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_2.tsv
+    jobid: 9
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_2.tsv
+    wildcards: sample=Healthy_2
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:13 2026]
+Finished jobid: 24 (Rule: count_reads)
+49 of 59 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:13 2026]
+localrule count_reads:
+    input: ../data/fastq/JE33a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_1.tsv
+    jobid: 54
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_1.tsv
+    wildcards: sample=JE33a_1
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:13 2026]
+Finished jobid: 9 (Rule: count_reads)
+50 of 59 steps (85%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:13 2026]
+localrule count_reads:
+    input: ../data/fastq/JE05a.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE05a.tsv
+    jobid: 17
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE05a.tsv
+    wildcards: sample=JE05a
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:14 2026]
+Finished jobid: 17 (Rule: count_reads)
+51 of 59 steps (86%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:14 2026]
+localrule count_reads:
+    input: ../data/fastq/JE27a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_2.tsv
+    jobid: 39
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_2.tsv
+    wildcards: sample=JE27a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:14 2026]
+Finished jobid: 39 (Rule: count_reads)
+52 of 59 steps (88%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:14 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_2.tsv
+    jobid: 29
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_2.tsv
+    wildcards: sample=JE20a_2
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Nov 24 10:47:14 2026]
+Finished jobid: 53 (Rule: count_reads)
+53 of 59 steps (90%) done
+Execute 1 jobs...
+[Tue Nov 24 10:47:14 2026]
+localrule count_reads:
+    input: ../data/fastq/JE20c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_1.tsv
+    jobid: 32
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_1.tsv
+    wildcards: sample=JE20c_1
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:15 2026]
+Finished jobid: 29 (Rule: count_reads)
+54 of 59 steps (92%) done
+[Tue Nov 24 10:47:15 2026]
+Finished jobid: 32 (Rule: count_reads)
+55 of 59 steps (93%) done
+[Tue Nov 24 10:47:16 2026]
+Finished jobid: 54 (Rule: count_reads)
+56 of 59 steps (95%) done
+[Tue Nov 24 10:47:16 2026]
+Finished jobid: 11 (Rule: count_reads)
+57 of 59 steps (97%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:16 2026]
+localrule summarize_reads:
+    input: ../list.0801_mcfDNA_analysis_by_banz.txt, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_3.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_4.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_5.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_6.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_3.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE03a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE04a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE05a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE06a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE14a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE35a_1.tsv
+    output: ../results/0801_mcfDNA_analysis_by_banz_261120/reads.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/reads_length_distribution.tsv
+    jobid: 1
+    reason: Updated input files: ../list.0801_mcfDNA_analysis_by_banz.txt; Input files updated by another job: ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_3.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_3.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE30a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_4.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE35a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE01a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27d_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE05a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE32a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE14a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE33a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE06a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE02a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_6.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19c_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE03a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE04a.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20b_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_5.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE31a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE15a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE19b_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27e_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE25a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE26a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE34a_2.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/H2O_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/Healthy_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE20a_1.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/read_counts/JE27b_2.tsv
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:18 2026]
+Finished jobid: 1 (Rule: summarize_reads)
+58 of 59 steps (98%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 10:47:19 2026]
+localrule all:
+    input: ../results/0801_mcfDNA_analysis_by_banz_261120/reads.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/reads_length_distribution.tsv
+    jobid: 0
+    reason: Input files updated by another job: ../results/0801_mcfDNA_analysis_by_banz_261120/reads.tsv, ../results/0801_mcfDNA_analysis_by_banz_261120/reads_length_distribution.tsv
+    resources: tmpdir=/tmp
+[Tue Nov 24 10:47:19 2026]
+Finished jobid: 0 (Rule: all)
+59 of 59 steps (100%) done
+Complete log(s): /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/log/2026-11-24T104659.708261.snakemake.log

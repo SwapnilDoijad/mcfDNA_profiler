@@ -1,0 +1,75 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 11:40:06
+  Workflow ID: c1a92092-4fe6-4c4f-9723-2658b9b716d2
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: gpu014.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/lib/python3.12/site-packages/snakemake/__main__.py --snakefile /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile --target-jobs kraken2:sample=JE19b_1 --allowed-rules kraken2 --cores all --attempt 1 --force-use-threads --wait-for-files /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/tmp.7if35rfq ../data/fastq/JE19b_1.fastq.gz /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers input mtime params software-env code --conda-frontend conda --shared-fs-usage persistence source-cache sources storage-local-copies input-output software-deployment-cache software-deployment --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin --runtime-source-cache-path /home/xa73pav/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpw1vzhzp9 --configfiles /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml --set-resources base64//a3Jha2VuMjpzbHVybV9wYXJ0aXRpb249c2hvcnQsc3RhbmRhcmQsbG9uZyxncHUsZ3B1LXZlbyxpbnRlcmFjdGl2ZSxmYXQ= --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= base64//c2x1cm1fcGFydGl0aW9uPXNob3J0LHN0YW5kYXJkLGxvbmcsZ3B1LGdwdS12ZW8saW50ZXJhY3RpdmU= --executor slurm-jobstep --jobs 1 --mode remote
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: 247434e97ce187f7a96e55ebb1a45c50
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 24 11:40:06 2026]
+rule kraken2:
+    input: ../data/fastq/JE19b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.log
+    jobid: 0
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmarks/kraken2/JE19b_1.tsv
+    reason: Forced execution
+    wildcards: sample=JE19b_1
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488151, disk=488.15 GB, disk_mib=465538, mem_mb=256000, mem=256 GB, mem_mib=244141, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 11:40:09
+  Workflow ID: 173d0fce-bd63-4ebc-8e4c-76fe076266be
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: gpu014.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/lib/python3.12/site-packages/snakemake/__main__.py --snakefile /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile --target-jobs kraken2:sample=JE19b_1 --allowed-rules kraken2 --cores all --attempt 1 --force-use-threads --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env code params input mtime --conda-frontend conda --shared-fs-usage sources persistence software-deployment storage-local-copies software-deployment-cache source-cache input-output --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin --runtime-source-cache-path /home/xa73pav/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpw1vzhzp9 --configfiles /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml --set-resources base64//a3Jha2VuMjpzbHVybV9wYXJ0aXRpb249c2hvcnQsc3RhbmRhcmQsbG9uZyxncHUsZ3B1LXZlbyxpbnRlcmFjdGl2ZSxmYXQ= --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= base64//c2x1cm1fcGFydGl0aW9uPXNob3J0LHN0YW5kYXJkLGxvbmcsZ3B1LGdwdS12ZW8saW50ZXJhY3RpdmU= --mode remote
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: 247434e97ce187f7a96e55ebb1a45c50
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 24 11:40:09 2026]
+localrule kraken2:
+    input: ../data/fastq/JE19b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.log
+    jobid: 0
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmarks/kraken2/JE19b_1.tsv
+    reason: Forced execution
+    wildcards: sample=JE19b_1
+    threads: 24
+    resources: tmpdir=/tmp, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488151, disk=488.15 GB, disk_mib=465538, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9378332 ON gpu014 CANCELLED AT 2026-11-24T11:45:07 ***
+slurmstepd: error: *** STEP 9378332.0 ON gpu014 CANCELLED AT 2026-11-24T11:45:07 ***
+Will exit after finishing currently running jobs (scheduler).

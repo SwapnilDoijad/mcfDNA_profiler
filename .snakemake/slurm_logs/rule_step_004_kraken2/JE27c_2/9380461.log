@@ -1,0 +1,196 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 13:50:54
+  Workflow ID: 9cc1b44f-2379-4e81-8421-a7fe87c79b91
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: node019.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/lib/python3.12/site-packages/snakemake/__main__.py --snakefile /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile --target-jobs step_004_kraken2:sample=JE27c_2 --allowed-rules step_004_kraken2 --cores all --attempt 1 --force-use-threads --wait-for-files /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/tmp.hg4c1471 ../data/fastq/JE27c_2.fastq.gz /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime params software-env code input --conda-frontend conda --shared-fs-usage input-output source-cache persistence software-deployment software-deployment-cache storage-local-copies sources --latency-wait 60 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin --runtime-source-cache-path /home/xa73pav/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpo2bc38gl --configfiles /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml --set-resources base64//c3RlcF8wMDRfa3Jha2VuMjprcmFrZW5fc2xvdHM9MQ== base64//c3RlcF8wMDRfa3Jha2VuMjpydW50aW1lPTEyMA== base64//c3RlcF8wMDRfa3Jha2VuMjpzbHVybV9wYXJ0aXRpb249c2hvcnQsaW50ZXJhY3RpdmUsc3RhbmRhcmQsbG9uZyxncHUsZ3B1LXZlbyxmYXQ= --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= base64//cnVudGltZT0xMjA= base64//c2x1cm1fYWNjb3VudD1mc3UtdXNlcnM= base64//c2x1cm1fcGFydGl0aW9uPXNob3J0LGludGVyYWN0aXZlLHN0YW5kYXJkLGxvbmcsZ3B1LGdwdS12ZW8= --executor slurm-jobstep --jobs 1 --mode remote
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: e7984ea63571ea019185e121eb6b8f38
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 24 13:50:54 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+    jobid: 0
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27c_2.tsv
+    reason: Forced execution
+    wildcards: sample=JE27c_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=fsu-users, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 13:50:59
+  Workflow ID: 4f7fcabb-3278-44ff-ad15-7e5d34ec68ca
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: node019.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/lib/python3.12/site-packages/snakemake/__main__.py --snakefile /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile --target-jobs step_004_kraken2:sample=JE27c_2 --allowed-rules step_004_kraken2 --cores all --attempt 1 --force-use-threads --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers software-env input mtime code params --conda-frontend conda --shared-fs-usage input-output sources storage-local-copies persistence software-deployment-cache source-cache software-deployment --latency-wait 60 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin --runtime-source-cache-path /home/xa73pav/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpo2bc38gl --configfiles /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml --set-resources base64//c3RlcF8wMDRfa3Jha2VuMjprcmFrZW5fc2xvdHM9MQ== base64//c3RlcF8wMDRfa3Jha2VuMjpydW50aW1lPTEyMA== base64//c3RlcF8wMDRfa3Jha2VuMjpzbHVybV9wYXJ0aXRpb249c2hvcnQsaW50ZXJhY3RpdmUsc3RhbmRhcmQsbG9uZyxncHUsZ3B1LXZlbyxmYXQ= --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= base64//cnVudGltZT0xMjA= base64//c2x1cm1fYWNjb3VudD1mc3UtdXNlcnM= base64//c2x1cm1fcGFydGl0aW9uPXNob3J0LGludGVyYWN0aXZlLHN0YW5kYXJkLGxvbmcsZ3B1LGdwdS12ZW8= --mode remote
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: e7984ea63571ea019185e121eb6b8f38
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 24 13:50:59 2026]
+localrule step_004_kraken2:
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+    jobid: 0
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27c_2.tsv
+    reason: Forced execution
+    wildcards: sample=JE27c_2
+    threads: 24
+    resources: tmpdir=/tmp, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=fsu-users, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+/usr/bin/bash: line 13: 1359499 Killed                  kraken2 --db /veodata/03/databases/kraken2/v20250204_core_nt --report-minimizer-data --minimum-hit-groups 6 --threads 24 --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport --confidence 0.05 ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+RuleException:
+CalledProcessError in file "/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile", line 125:
+Command 'set -euo pipefail;  
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log' returned non-zero exit status 137.
+[Tue Nov 24 13:58:37 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 0
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Nov 24 13:58:37 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 0
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.
+slurmstepd: error: Detected 1 oom_kill event in StepId=9380461.0. Some of the step tasks have been OOM Killed.
+srun: error: node019: task 0: Out Of Memory
+[Tue Nov 24 13:58:37 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 0
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Nov 24 13:58:37 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 0
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

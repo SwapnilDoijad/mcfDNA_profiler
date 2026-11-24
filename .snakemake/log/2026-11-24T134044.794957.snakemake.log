@@ -1,0 +1,1098 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 13:40:45
+  Workflow ID: 104b2d57-bb9c-4668-a8fa-7ad0e50c6109
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: login2.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin/snakemake --configfile config.yaml --profile profiles/slurm --jobs 20 --latency-wait 60 --slurm-jobname-prefix mcfDNA_profiler --default-resources runtime=120 slurm_account=xa73pav slurm_partition=short,interactive,standard,long,gpu,gpu-veo --resources kraken_slots=10 --set-resources step_004_kraken2:kraken_slots=1 step_004_kraken2:runtime=120 step_004_kraken2:slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: e7984ea63571ea019185e121eb6b8f38
+
+Building DAG of jobs...
+SLURM run ID: mcfDNA_profiler_67ebe92a-a77d-4e44-8e48-6e5d278679e4
+MinJobAge 300s (>= 120s). 'squeue' should work reliably for status queries.
+Using shell: /usr/bin/bash
+Provided remote nodes: 20
+Provided resources: kraken_slots=Resource("kraken_slots", 10)
+Job stats:
+job                           count
+--------------------------  -------
+step_001_count_reads             57
+step_004_kraken2                 57
+step_002_summarize_reads          1
+step_003_plot_read_lengths        1
+all                               1
+total                           117
+
+Select jobs to execute...
+Execute 20 jobs...
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/Healthy_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+    jobid: 9
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/Healthy_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+    wildcards: sample=Healthy_2
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE20c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+    jobid: 33
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE20c_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+    wildcards: sample=JE20c_2
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/H2O_6.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+    jobid: 7
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/H2O_6.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+    wildcards: sample=H2O_6
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE19a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+    jobid: 22
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE19a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+    wildcards: sample=JE19a_1
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE26a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+    jobid: 37
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE26a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+    wildcards: sample=JE26a_2
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE32a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+    jobid: 52
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE32a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+    wildcards: sample=JE32a_1
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE01a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+    jobid: 11
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE01a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+    wildcards: sample=JE01a_1
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE19c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+    jobid: 26
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE19c_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+    wildcards: sample=JE19c_1
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE27b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+    jobid: 41
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE27b_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+    wildcards: sample=JE27b_2
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_001_count_reads:
+    input: ../data/fastq/JE34a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+    jobid: 56
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/001_count_reads/JE34a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+    wildcards: sample=JE34a_1
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE02a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log
+    jobid: 72
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE02a_2.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE02a_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488281, disk=488.28 GB, disk_mib=465662, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log
+    jobid: 98
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27b_1.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE27b_1
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE19a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log
+    jobid: 81
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE19a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport
+    wildcards: sample=JE19a_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/Healthy_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log
+    jobid: 66
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/Healthy_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport
+    wildcards: sample=Healthy_1
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488148, disk=488.15 GB, disk_mib=465535, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE35a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log
+    jobid: 116
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE35a_1.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE35a_1
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488189, disk=488.19 GB, disk_mib=465574, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+    jobid: 101
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27c_2.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE27c_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE01a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log
+    jobid: 69
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE01a_1.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE01a_1
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488344, disk=488.34 GB, disk_mib=465722, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27b_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log
+    jobid: 99
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27b_2.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE27b_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/H2O_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log
+    jobid: 61
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/H2O_2.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=H2O_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488148, disk=488.15 GB, disk_mib=465535, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+[Tue Nov 24 13:40:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE20c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log
+    jobid: 91
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE20c_2.tsv
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 256000 now: 248000 
+    wildcards: sample=JE20c_2
+    threads: 24
+    resources: tmpdir=<TBD>, disk_mb=488149, disk=488.15 GB, disk_mib=465536, mem_mb=248000, mem=248 GB, mem_mib=236512, runtime=120, slurm_account=xa73pav, slurm_partition=short,interactive,standard,long,gpu,gpu-veo,fat, kraken_slots=1
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 9
+    input: ../data/fastq/Healthy_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/Healthy_2.fastq.gz |
+        awk -F '\t' -v sample=Healthy_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 33
+    input: ../data/fastq/JE20c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE20c_2.fastq.gz |
+        awk -F '\t' -v sample=JE20c_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 7
+    input: ../data/fastq/H2O_6.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/H2O_6.fastq.gz |
+        awk -F '\t' -v sample=H2O_6 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 22
+    input: ../data/fastq/JE19a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE19a_1.fastq.gz |
+        awk -F '\t' -v sample=JE19a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 37
+    input: ../data/fastq/JE26a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE26a_2.fastq.gz |
+        awk -F '\t' -v sample=JE26a_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 52
+    input: ../data/fastq/JE32a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE32a_1.fastq.gz |
+        awk -F '\t' -v sample=JE32a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 11
+    input: ../data/fastq/JE01a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE01a_1.fastq.gz |
+        awk -F '\t' -v sample=JE01a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:46 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 26
+    input: ../data/fastq/JE19c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE19c_1.fastq.gz |
+        awk -F '\t' -v sample=JE19c_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 41
+    input: ../data/fastq/JE27b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE27b_2.fastq.gz |
+        awk -F '\t' -v sample=JE27b_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_001_count_reads: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_001_count_reads:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 56
+    input: ../data/fastq/JE34a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE34a_1.fastq.gz |
+        awk -F '\t' -v sample=JE34a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 72
+    input: ../data/fastq/JE02a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE02a_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 98
+    input: ../data/fastq/JE27b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27b_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 81
+    input: ../data/fastq/JE19a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE19a_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 66
+    input: ../data/fastq/Healthy_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/Healthy_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 116
+    input: ../data/fastq/JE35a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE35a_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 101
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 69
+    input: ../data/fastq/JE01a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE01a_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:47 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 99
+    input: ../data/fastq/JE27b_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27b_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:48 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 61
+    input: ../data/fastq/H2O_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/H2O_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport
+Exception in run_job for rule step_004_kraken2: The given account xa73pav appears to be invalid. Available accounts:
+fsu-users
+[Tue Nov 24 13:40:48 2026]
+Error in rule step_004_kraken2:
+    message: Job submission failed with exception: The given account xa73pav appears to be invalid. Available accounts:
+fsu-usersFor further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 91
+    input: ../data/fastq/JE20c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE20c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport
+Shutting down, this might take some time.
+Cleaning up SLURM log files older than 10 day(s).
+Exiting because a job execution failed. Look below for error messages
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 9
+    input: ../data/fastq/Healthy_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/Healthy_2.fastq.gz |
+        awk -F '\t' -v sample=Healthy_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 11
+    input: ../data/fastq/JE01a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE01a_1.fastq.gz |
+        awk -F '\t' -v sample=JE01a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 26
+    input: ../data/fastq/JE19c_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE19c_1.fastq.gz |
+        awk -F '\t' -v sample=JE19c_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 41
+    input: ../data/fastq/JE27b_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE27b_2.fastq.gz |
+        awk -F '\t' -v sample=JE27b_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 56
+    input: ../data/fastq/JE34a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE34a_1.fastq.gz |
+        awk -F '\t' -v sample=JE34a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE34a_1/JE34a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 81
+    input: ../data/fastq/JE19a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE19a_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_2/JE19a_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 66
+    input: ../data/fastq/Healthy_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/Healthy_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_1/Healthy_1.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 72
+    input: ../data/fastq/JE02a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE02a_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 116
+    input: ../data/fastq/JE35a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE35a_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 101
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 33
+    input: ../data/fastq/JE20c_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE20c_2.fastq.gz |
+        awk -F '\t' -v sample=JE20c_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 69
+    input: ../data/fastq/JE01a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE01a_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 99
+    input: ../data/fastq/JE27b_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27b_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 61
+    input: ../data/fastq/H2O_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/H2O_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 22
+    input: ../data/fastq/JE19a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE19a_1.fastq.gz |
+        awk -F '\t' -v sample=JE19a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19a_1/JE19a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 7
+    input: ../data/fastq/H2O_6.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/H2O_6.fastq.gz |
+        awk -F '\t' -v sample=H2O_6 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_6/H2O_6.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 37
+    input: ../data/fastq/JE26a_2.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE26a_2.fastq.gz |
+        awk -F '\t' -v sample=JE26a_2 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_001_count_reads:
+    message: None
+    jobid: 52
+    input: ../data/fastq/JE32a_1.fastq.gz
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+    shell:
+        
+        seqkit fx2tab -j 1 -n -l ../data/fastq/JE32a_1.fastq.gz |
+        awk -F '\t' -v sample=JE32a_1 '
+            { n++; a += ($NF >= 35); b += ($NF >= 50); c += ($NF >= 100); d += ($NF >= 250) }
+            END { printf "%s\t%d\t%d\t%d\t%d\t%d\n", sample, n, a, b, c, d }
+        ' > ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.reads.tsv
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 91
+    input: ../data/fastq/JE20c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE20c_2.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log
+        
+        (command exited with non-zero exit code)
+[Tue Nov 24 13:41:25 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 98
+    input: ../data/fastq/JE27b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 248000 -lt 248000 ]; then
+            echo "Kraken2 needs mem_mb=248000; the global resource limit reduced it to 248000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE27b_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Complete log(s): /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/log/2026-11-24T134044.794957.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

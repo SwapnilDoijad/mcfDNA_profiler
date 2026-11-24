@@ -1,0 +1,561 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-24 11:51:44
+  Workflow ID: f69b5ed3-565a-4845-898a-aaa216a277da
+  Platform: Linux-4.18.0-425.13.1.el8_7.x86_64-x86_64-with-glibc2.28
+  Host: login2.cluster
+  User: xa73pav
+  Snakemake version: 9.22.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:37:43) [GCC 15.3.0]
+  Command: /home/xa73pav/tools/miniconda3/envs/mcfDNA_profiler_v0.1/bin/snakemake --configfile config.yaml --profile profiles/slurm --jobs 10 --slurm-jobname-prefix mcfDNA_profiler --default-resources slurm_partition=short,standard,long,gpu,gpu-veo,interactive --set-resources step_004_kraken2:slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+  Snakefile: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile
+  Base directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Run directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Working directory: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler
+  Config file(s): [PosixPath('/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/config.yaml')]
+  Config MD5: 247434e97ce187f7a96e55ebb1a45c50
+
+Building DAG of jobs...
+SLURM run ID: mcfDNA_profiler_302329fb-67e6-49e7-a051-e521f1400764
+MinJobAge 300s (>= 120s). 'squeue' should work reliably for status queries.
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                           count
+--------------------------  -------
+step_001_count_reads             57
+step_004_kraken2                 57
+step_002_summarize_reads          1
+step_003_plot_read_lengths        1
+all                               1
+total                           117
+
+Select jobs to execute...
+Execute 10 jobs...
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE02a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.log
+    jobid: 72
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE02a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_2/JE02a_2.kreport
+    wildcards: sample=JE02a_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488281, disk=488.28 GB, disk_mib=465662, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.log
+    jobid: 98
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27b_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_1/JE27b_1.kraken.out
+    wildcards: sample=JE27b_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE32a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_2/JE32a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_2/JE32a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_2/JE32a_2.kraken.log
+    jobid: 111
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE32a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_2/JE32a_2.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_2/JE32a_2.kraken.out
+    wildcards: sample=JE32a_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488180, disk=488.18 GB, disk_mib=465565, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_1/JE27a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_1/JE27a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_1/JE27a_1.kraken.log
+    jobid: 96
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_1/JE27a_1.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_1/JE27a_1.kraken.out
+    wildcards: sample=JE27a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE35a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.log
+    jobid: 116
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE35a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE35a_1/JE35a_1.kreport
+    wildcards: sample=JE35a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488189, disk=488.19 GB, disk_mib=465574, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.log
+    jobid: 101
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27c_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27c_2/JE27c_2.kreport
+    wildcards: sample=JE27c_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE01a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.log
+    jobid: 69
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE01a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE01a_1/JE01a_1.kreport
+    wildcards: sample=JE01a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488344, disk=488.34 GB, disk_mib=465722, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27b_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.log
+    jobid: 99
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27b_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27b_2/JE27b_2.kreport
+    wildcards: sample=JE27b_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/H2O_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.log
+    jobid: 61
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/H2O_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_2/H2O_2.kraken.out
+    wildcards: sample=H2O_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488148, disk=488.15 GB, disk_mib=465535, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 11:51:45 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE20c_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.log
+    jobid: 91
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE20c_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20c_2/JE20c_2.kraken.out
+    wildcards: sample=JE20c_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+No SLURM account given, trying to guess.
+No SLURM account given, trying to guess.
+No account was given, not able to get a SLURM account via sacct: sacct: invalid option -- '1'
+
+Unable to guess SLURM account. Trying to proceed without.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No account was given, not able to get a SLURM account via sacct: sacct: invalid option -- '1'
+
+Unable to guess SLURM account. Trying to proceed without.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 98 has been submitted with SLURM jobid 9378570 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27b_1/9378570.log).
+Job 72 has been submitted with SLURM jobid 9378571 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE02a_2/9378571.log).
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 111 has been submitted with SLURM jobid 9378572 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE32a_2/9378572.log).
+Job 96 has been submitted with SLURM jobid 9378573 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27a_1/9378573.log).
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 116 has been submitted with SLURM jobid 9378574 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE35a_1/9378574.log).
+Job 101 has been submitted with SLURM jobid 9378575 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27c_2/9378575.log).
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 69 has been submitted with SLURM jobid 9378576 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE01a_1/9378576.log).
+Job 99 has been submitted with SLURM jobid 9378577 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27b_2/9378577.log).
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 61 has been submitted with SLURM jobid 9378578 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/H2O_2/9378578.log).
+Job 91 has been submitted with SLURM jobid 9378579 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE20c_2/9378579.log).
+Select jobs to execute...
+[Tue Nov 24 12:01:46 2026]
+Finished jobid: 111 (Rule: step_004_kraken2)
+1 of 117 steps (1%) done
+Execute 1 jobs...
+[Tue Nov 24 12:01:46 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE05a.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE05a/JE05a.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE05a/JE05a.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE05a/JE05a.kraken.log
+    jobid: 75
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE05a.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE05a/JE05a.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE05a/JE05a.kraken.out
+    wildcards: sample=JE05a
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488155, disk=488.15 GB, disk_mib=465541, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 75 has been submitted with SLURM jobid 9378823 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE05a/9378823.log).
+[Tue Nov 24 12:01:46 2026]
+Finished jobid: 96 (Rule: step_004_kraken2)
+2 of 117 steps (2%) done
+[Tue Nov 24 12:01:46 2026]
+Finished jobid: 101 (Rule: step_004_kraken2)
+3 of 117 steps (3%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Tue Nov 24 12:01:47 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE33a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_1/JE33a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_1/JE33a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_1/JE33a_1.kraken.log
+    jobid: 112
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE33a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_1/JE33a_1.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_1/JE33a_1.kraken.out
+    wildcards: sample=JE33a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488176, disk=488.18 GB, disk_mib=465561, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+[Tue Nov 24 12:01:47 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE32a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.kraken.log
+    jobid: 110
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE32a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE32a_1/JE32a_1.kreport
+    wildcards: sample=JE32a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488184, disk=488.18 GB, disk_mib=465569, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 112 has been submitted with SLURM jobid 9378824 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE33a_1/9378824.log).
+Job 110 has been submitted with SLURM jobid 9378825 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE32a_1/9378825.log).
+[Tue Nov 24 12:01:47 2026]
+Finished jobid: 99 (Rule: step_004_kraken2)
+4 of 117 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 12:01:47 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE19c_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.log
+    jobid: 84
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE19c_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport
+    wildcards: sample=JE19c_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 84 has been submitted with SLURM jobid 9378826 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE19c_1/9378826.log).
+[Tue Nov 24 12:02:27 2026]
+Finished jobid: 69 (Rule: step_004_kraken2)
+5 of 117 steps (4%) done
+Execute 1 jobs...
+[Tue Nov 24 12:02:27 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE04a.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE04a/JE04a.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE04a/JE04a.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE04a/JE04a.kraken.log
+    jobid: 74
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE04a.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE04a/JE04a.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE04a/JE04a.kraken.out
+    wildcards: sample=JE04a
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488151, disk=488.15 GB, disk_mib=465538, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 74 has been submitted with SLURM jobid 9378835 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE04a/9378835.log).
+[Tue Nov 24 12:02:27 2026]
+Finished jobid: 61 (Rule: step_004_kraken2)
+6 of 117 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 12:02:27 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_2/JE27a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_2/JE27a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_2/JE27a_2.kraken.log
+    jobid: 97
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_2/JE27a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27a_2/JE27a_2.kreport
+    wildcards: sample=JE27a_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 97 has been submitted with SLURM jobid 9378836 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27a_2/9378836.log).
+[Tue Nov 24 12:06:07 2026]
+Finished jobid: 91 (Rule: step_004_kraken2)
+7 of 117 steps (6%) done
+Execute 1 jobs...
+[Tue Nov 24 12:06:08 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/Healthy_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.kraken.log
+    jobid: 67
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/Healthy_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_2/Healthy_2.kraken.out
+    wildcards: sample=Healthy_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488148, disk=488.15 GB, disk_mib=465535, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 67 has been submitted with SLURM jobid 9378884 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/Healthy_2/9378884.log).
+[Tue Nov 24 12:06:48 2026]
+Finished jobid: 98 (Rule: step_004_kraken2)
+8 of 117 steps (7%) done
+Execute 1 jobs...
+[Tue Nov 24 12:06:48 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE19b_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.log
+    jobid: 82
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE19b_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_1/JE19b_1.kraken.out
+    wildcards: sample=JE19b_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488151, disk=488.15 GB, disk_mib=465538, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 82 has been submitted with SLURM jobid 9378886 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE19b_1/9378886.log).
+[Tue Nov 24 12:09:18 2026]
+Finished jobid: 72 (Rule: step_004_kraken2)
+9 of 117 steps (8%) done
+Execute 1 jobs...
+[Tue Nov 24 12:09:18 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE27e_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27e_1/JE27e_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27e_1/JE27e_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27e_1/JE27e_1.kraken.log
+    jobid: 104
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE27e_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27e_1/JE27e_1.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE27e_1/JE27e_1.kraken.out
+    wildcards: sample=JE27e_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488150, disk=488.15 GB, disk_mib=465537, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 104 has been submitted with SLURM jobid 9378952 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE27e_1/9378952.log).
+[Tue Nov 24 12:11:49 2026]
+Finished jobid: 116 (Rule: step_004_kraken2)
+10 of 117 steps (9%) done
+Execute 1 jobs...
+[Tue Nov 24 12:11:49 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE03a.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE03a/JE03a.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE03a/JE03a.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE03a/JE03a.kraken.log
+    jobid: 73
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE03a.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE03a/JE03a.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE03a/JE03a.kraken.out
+    wildcards: sample=JE03a
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488171, disk=488.17 GB, disk_mib=465557, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 73 has been submitted with SLURM jobid 9379017 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE03a/9379017.log).
+[Tue Nov 24 12:16:50 2026]
+Finished jobid: 110 (Rule: step_004_kraken2)
+11 of 117 steps (9%) done
+Execute 1 jobs...
+[Tue Nov 24 12:16:50 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE19b_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_2/JE19b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_2/JE19b_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_2/JE19b_2.kraken.log
+    jobid: 83
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE19b_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_2/JE19b_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19b_2/JE19b_2.kreport
+    wildcards: sample=JE19b_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488151, disk=488.15 GB, disk_mib=465538, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 83 has been submitted with SLURM jobid 9379055 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE19b_2/9379055.log).
+[Tue Nov 24 12:19:20 2026]
+Finished jobid: 112 (Rule: step_004_kraken2)
+12 of 117 steps (10%) done
+Execute 1 jobs...
+[Tue Nov 24 12:19:20 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE33a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_2/JE33a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_2/JE33a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_2/JE33a_2.kraken.log
+    jobid: 113
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE33a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_2/JE33a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE33a_2/JE33a_2.kreport
+    wildcards: sample=JE33a_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488172, disk=488.17 GB, disk_mib=465558, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 113 has been submitted with SLURM jobid 9379082 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE33a_2/9379082.log).
+[Tue Nov 24 12:24:21 2026]
+Finished jobid: 67 (Rule: step_004_kraken2)
+13 of 117 steps (11%) done
+Execute 1 jobs...
+[Tue Nov 24 12:24:21 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/Healthy_3.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_3/Healthy_3.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_3/Healthy_3.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_3/Healthy_3.kraken.log
+    jobid: 68
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/Healthy_3.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_3/Healthy_3.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/Healthy_3/Healthy_3.kraken.out
+    wildcards: sample=Healthy_3
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488148, disk=488.15 GB, disk_mib=465535, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 68 has been submitted with SLURM jobid 9379177 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/Healthy_3/9379177.log).
+[Tue Nov 24 12:32:32 2026]
+Finished jobid: 75 (Rule: step_004_kraken2)
+14 of 117 steps (12%) done
+Execute 1 jobs...
+[Tue Nov 24 12:32:32 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/H2O_5.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_5/H2O_5.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_5/H2O_5.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_5/H2O_5.kraken.log
+    jobid: 64
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/H2O_5.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_5/H2O_5.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/H2O_5/H2O_5.kreport
+    wildcards: sample=H2O_5
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 64 has been submitted with SLURM jobid 9379303 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/H2O_5/9379303.log).
+[Tue Nov 24 12:32:32 2026]
+Finished jobid: 97 (Rule: step_004_kraken2)
+15 of 117 steps (13%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov 24 12:32:33 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE26a_2.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.kraken.log
+    jobid: 95
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE26a_2.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.kreport, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_2/JE26a_2.kraken.out
+    wildcards: sample=JE26a_2
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488148, disk=488.15 GB, disk_mib=465535, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 95 has been submitted with SLURM jobid 9379304 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE26a_2/9379304.log).
+[Tue Nov 24 12:35:03 2026]
+Finished jobid: 83 (Rule: step_004_kraken2)
+16 of 117 steps (14%) done
+Execute 1 jobs...
+[Tue Nov 24 12:35:03 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE26a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_1/JE26a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_1/JE26a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_1/JE26a_1.kraken.log
+    jobid: 94
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE26a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_1/JE26a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE26a_1/JE26a_1.kreport
+    wildcards: sample=JE26a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488149, disk=488.15 GB, disk_mib=465536, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 94 has been submitted with SLURM jobid 9379357 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE26a_1/9379357.log).
+[Tue Nov 24 12:38:43 2026]
+Finished jobid: 113 (Rule: step_004_kraken2)
+17 of 117 steps (15%) done
+Execute 1 jobs...
+[Tue Nov 24 12:38:44 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE20a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20a_1/JE20a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20a_1/JE20a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20a_1/JE20a_1.kraken.log
+    jobid: 86
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE20a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20a_1/JE20a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE20a_1/JE20a_1.kreport
+    wildcards: sample=JE20a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488150, disk=488.15 GB, disk_mib=465537, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 86 has been submitted with SLURM jobid 9379383 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE20a_1/9379383.log).
+[Tue Nov 24 12:40:14 2026]
+Finished jobid: 82 (Rule: step_004_kraken2)
+18 of 117 steps (15%) done
+Execute 1 jobs...
+[Tue Nov 24 12:40:14 2026]
+rule step_004_kraken2:
+    input: ../data/fastq/JE02a_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_1/JE02a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_1/JE02a_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_1/JE02a_1.kraken.log
+    jobid: 71
+    benchmark: ../results/0801_mcfDNA_analysis_by_profiler/benchmark/004_kraken2/JE02a_1.tsv
+    reason: Missing output files: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_1/JE02a_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE02a_1/JE02a_1.kreport
+    wildcards: sample=JE02a_1
+    threads: 24
+    resources: tmpdir=<TBD>, mem_mb=256000, mem=256 GB, mem_mib=244141, disk_mb=488336, disk=488.34 GB, disk_mib=465714, slurm_partition=short,standard,long,gpu,gpu-veo,interactive,fat
+Select jobs to execute...
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+Job 71 has been submitted with SLURM jobid 9379398 (log: /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/slurm_logs/rule_step_004_kraken2/JE02a_1/9379398.log).
+Waiting at most 5 seconds for missing files:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out (missing locally)
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport (missing locally)
+MissingOutputException in rule step_004_kraken2 in file "/vast/xa73pav/projects/p_redmed/mcfDNA_profiler/Snakefile", line 104:
+Job 84  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out (missing locally, parent dir contents: JE19c_1.kraken.log, JE19c_1.kraken.out, JE19c_1.kreport)
+Removing output files of failed job step_004_kraken2 since they might be corrupted:
+../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport
+[Tue Nov 24 12:41:34 2026]
+Finished jobid: 74 (Rule: step_004_kraken2)
+19 of 117 steps (16%) done
+[Tue Nov 24 12:46:35 2026]
+Finished jobid: 104 (Rule: step_004_kraken2)
+20 of 117 steps (17%) done
+[Tue Nov 24 12:46:35 2026]
+Finished jobid: 73 (Rule: step_004_kraken2)
+21 of 117 steps (18%) done
+[Tue Nov 24 12:49:05 2026]
+Finished jobid: 68 (Rule: step_004_kraken2)
+22 of 117 steps (19%) done
+[Tue Nov 24 12:50:36 2026]
+Finished jobid: 64 (Rule: step_004_kraken2)
+23 of 117 steps (20%) done
+[Tue Nov 24 12:50:36 2026]
+Finished jobid: 95 (Rule: step_004_kraken2)
+24 of 117 steps (21%) done
+[Tue Nov 24 12:50:36 2026]
+Finished jobid: 94 (Rule: step_004_kraken2)
+25 of 117 steps (21%) done
+[Tue Nov 24 12:52:06 2026]
+Finished jobid: 86 (Rule: step_004_kraken2)
+26 of 117 steps (22%) done
+[Tue Nov 24 12:57:07 2026]
+Finished jobid: 71 (Rule: step_004_kraken2)
+27 of 117 steps (23%) done
+Shutting down, this might take some time.
+Cleaning up SLURM log files older than 10 day(s).
+Exiting because a job execution failed. Look below for error messages
+[Tue Nov 24 12:57:47 2026]
+Error in rule step_004_kraken2:
+    message: None
+    jobid: 84
+    input: ../data/fastq/JE19c_1.fastq.gz, /veodata/03/databases/kraken2/v20250204_core_nt/hash.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/opts.k2d, /veodata/03/databases/kraken2/v20250204_core_nt/taxo.k2d
+    output: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out, ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport
+    log: ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.log (check log file(s) for error details)
+    shell:
+        
+        if [ 256000 -lt 256000 ]; then
+            echo "Kraken2 needs mem_mb=256000; the global resource limit reduced it to 256000." | tee ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.log >&2
+            exit 1
+        fi
+        kraken2 \
+            --db /veodata/03/databases/kraken2/v20250204_core_nt \
+            --report-minimizer-data \
+            --minimum-hit-groups 6 \
+            --threads 24 \
+            --output ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.out \
+            --report ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kreport \
+            --confidence 0.05 \
+            ../data/fastq/JE19c_1.fastq.gz 2> ../results/0801_mcfDNA_analysis_by_profiler/raw_files/JE19c_1/JE19c_1.kraken.log
+        
+        (command exited with non-zero exit code)
+Complete log(s): /vast/xa73pav/projects/p_redmed/mcfDNA_profiler/.snakemake/log/2026-11-24T115144.437675.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
