@@ -1,0 +1,6 @@
+# Paths are relative to the directory from which Snakemake is run.
+samples: ../list.0801_mcfDNA_analysis_by_banz.txt
+fastq_dir: ../data/fastq
+output_dir: ../results/0801_mcfDNA_analysis_by_profiler
+kraken2_db: /veodata/03/databases/kraken2/v20250204_core_nt
+kraken2_mem_mb: 256000

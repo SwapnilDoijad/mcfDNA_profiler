@@ -1,0 +1,2 @@
+executor: slurm
+default-resources: []
